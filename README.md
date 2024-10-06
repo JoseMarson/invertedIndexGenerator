@@ -6,6 +6,8 @@ Este projeto implementa um gerador de índice invertido e um modelo booleano de 
 
 Este projeto foi desenvolvido por **José Vitor Oliveira Marson** para cumprimento de um trabalho da disciplina de Organização e Recuperação de Informações, ministrado pelo professor Wendel Alexandre Xavier de Melo. 
 
+**Versão do Python**: 3.11.4
+
 ### Requisitos de instalação
 
 Antes de executar o código, certifique-se de instalar as seguintes bibliotecas Python:
