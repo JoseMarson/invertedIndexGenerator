@@ -33,5 +33,5 @@ Execute o programa da seguinte forma:
 única linha
 4. **Entrada no terminal**: A linha de entrada no terminal deve ser no seguinte modelo: 
     ```bash
-    python modelo_booleano.py baseSelecionada.txt consultaSelecionada.txt
+    python invertedIndexGenerator.py baseSelecionada.txt consultaSelecionada.txt
 5. **O que esperar**: Após a execussão, o índice invertido será gerado no arquivo index.txt, e o resultado da consulta será gravado no arquivo resposta.txt.
