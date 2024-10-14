@@ -37,3 +37,8 @@ Execute o programa da seguinte forma:
     ```bash
     python invertedIndexGenerator.py baseSelecionada.txt consultaSelecionada.txt
 5. **O que esperar**: Após a execussão, o índice invertido será gerado no arquivo index.txt, e o resultado da consulta será gravado no arquivo resposta.txt.
+
+Para executar o programa submetendo-o pelo corretor automático:
+
+    ```bash
+    py waxm_corretor_modelo_booleano.pyc base.txt consulta.txt invertedIndexGenerator.py
