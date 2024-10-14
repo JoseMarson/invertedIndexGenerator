@@ -4,7 +4,7 @@ import os
 from collections import defaultdict
 
 nlp = spacy.load("pt_core_news_lg")
-caminho= r"D:\QuintoPeriodo\ORI"
+caminho= r"C:\Users\José Vitor Marson\Desktop\QuintoPeriodo\ORI"
 
 def prepareDocs(text):
     doc = nlp(text.lower())
@@ -35,7 +35,7 @@ def generateInvertedIndex(documentos):
                 indice_invertido[termo][i] += 1
 
     try:
-        with open("index.txt", 'w') as f:
+        with open("indice.txt", 'w') as f:
             for termo, docs in sorted(indice_invertido.items()):
                 doc_str = " ".join([f"{doc_id},{count}" for doc_id, count in docs.items()])
                 f.write(f"{termo}: {doc_str}\n")
@@ -96,10 +96,15 @@ def processInquiry(consulta, indice):
 
     return termos[0] if termos else set()
 
-def writeReply(resultado):
+def writeReply(resultado, documentos):
     with open("resposta.txt", 'w') as f:
+        total_documentos = len(resultado)
+        f.write(f"{total_documentos}\n") 
+
         for doc_id in sorted(resultado):
-            f.write(f"{doc_id}\n")
+            nome_arquivo = os.path.basename(documentos[doc_id - 1])  
+            f.write(f"{nome_arquivo}\n") 
+
 
 def main():
     print("\n====================WELCOME TO THE INVERTED INDEX GENERATOR====================")
@@ -130,7 +135,7 @@ def main():
         print(f"Error: Query File {arquivo_consulta} not found.")
         sys.exit(1)
 
-    writeReply(resultado)
+    writeReply(resultado,documentos)
     print("\nThe answer was written in the file resposta.txt.")
 
 
