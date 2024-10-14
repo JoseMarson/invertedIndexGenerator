@@ -40,5 +40,4 @@ Execute o programa da seguinte forma:
 
 Para executar o programa submetendo-o pelo corretor automático:
 
-    ```bash
     py waxm_corretor_modelo_booleano.pyc base.txt consulta.txt invertedIndexGenerator.py
